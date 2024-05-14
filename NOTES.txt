@@ -1,0 +1,42 @@
+The .container class provides a responsive fixed width container. Size snaps based on size
+The .container-fluid class provides a full width container, spanning the entire width of the viewport. Size are fluid based on size. Always 100% width
+
+.col : Columns
+.row : Rows | standard to use as wrapper
+
+.float{-start | -end | -none} : FLOAT
+
+(https://www.w3schools.com/bootstrap5/bootstrap_buttons.php)
+
+.btn : Buttons | can be used on <a>, <button>, or <input> elements | use .d-grid on parent class for full length block level buttons
+
+(https://www.w3schools.com/bootstrap5/bootstrap_typography.php)
+
+<h1> to <h6>  with a bolder font-weight and a responsive font-size.
+.h1 to .h6 also works to apply to elements
+display-1 to display 6 for bigger but lighter
+<small> and .small for smaller secondary text
+<blockquote> and .blockquote for quotes | <footer> inside the block with .blockquote-footer for source
+
+(https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-helper-classes.php)
+
+Containers have no top/bottom padding:
+.{ m | p }{ t (top) | b (bottom) | s (start) | e (end) | x (x-axis) | y (y-axis) } : Margins and Paddings
+.border : Adds Borders
+.text-{color}-{opt: # opacity} : Adds text color | can add opacity
+.bg-{color} : Adds background color
+.text-bg-color : Auto handle?
+
+.w-{%} : Width of parent
+.h-{%} : Height of parent
+.m{h | w} : max height or width
+
+Vertical Alignment: 
+.align-{ baseline | top | middle | bottom | text-top | text-bottom } : Vertical Alignment
+
+Postion:
+.position-{ static | relative | absolute | fixed | sticky }
+.fixed-{ top | bottom }
+.sticky-{ top | bottom }
+
+TRY GATSBY LINK OUT
