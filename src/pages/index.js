@@ -11,7 +11,9 @@ const IndexPage = () => {
 
   useEffect(() => {
       const handleScroll = () => {
-        setNavbar(window.scrollY > 700)
+        // setNavbar(window.scrollY > window.innerHeight )
+        setNavbar(window.scrollY > window.innerHeight )
+        console.log("window.scrollY", window.scrollY)
       }
 
       window.addEventListener('scroll', handleScroll)
@@ -22,11 +24,20 @@ const IndexPage = () => {
     }, []
   )
 
+  const handleScrollDown = () => {
+	
+		scrollRef.current.scrollIntoView({ 
+      behavior: 'smooth'
+		})
+
+		setNavbar(true)
+	}
+
   return (
     <>
       <Layout>
         <NavBar navbar={navbar}/>
-        <Hero setNavbar = {setNavbar}/>
+        <Hero handleScrollDown={handleScrollDown} navbar={navbar}/>
         <Test scrollRef={scrollRef}/>
       </Layout>
     </>

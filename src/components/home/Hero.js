@@ -3,20 +3,13 @@ import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import "bootstrap/dist/css/bootstrap.min.css"
 
-const Hero = ({setNavbar}) => {
+const Hero = (props) => {
 
-	const handleScrollDown = () => {
-		const element = document.getElementById('target_element');
-
-		element.scrollIntoView({ 
-			behavior: 'smooth' 
-		})
-
-		setNavbar(true)
-	}
+	const handleScrollDown = props.handleScrollDown
+	const navbar = props.navbar
 
 	return(
-		<div className="container-fluid hero-container py-0 px-0">
+		<Herocontainer className="container-fluid hero-container py-0 px-0">
 			<HeroImage className="image-mask-wrapper">
 				<StaticImage
 					className="hero-img"
@@ -25,27 +18,48 @@ const Hero = ({setNavbar}) => {
 					placeholder="none"
 				/>
 			</HeroImage>
-			<HeroLogo>
-				<StaticImage
-					// className="hero-logo"
-					src="../../images/test_logo_big.png"
-					alt="Logo"
-					placeholder="none"
-				/>
-			</HeroLogo>
-			<HeroText className="h1 align-middle text-white">
-				Hi! This is a Test Website
-			</HeroText>
-			<ScrollButton onClick={handleScrollDown}>
+			<div className={"hero_logo_text" + ( navbar ? " hidden" : " visible")}>
+				<HeroLogo>
+					<StaticImage
+						// className="hero-logo"
+						src="../../images/test_logo_2.png"
+						alt="Logo"
+						placeholder="none"
+					/>
+				</HeroLogo>
+				<HeroText className="h1 align-middle text-white">
+					Hi! This is a Test Website
+				</HeroText>
+			</div>
+			<ScrollButton onClick={ handleScrollDown }>
 				<div>
 					<span></span>
 				</div>
 			</ScrollButton>
-		</div>
+		</Herocontainer>
 	)
 }
 
 export default Hero
+
+const Herocontainer = styled.div`
+
+	.hidden{
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.visible{
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.hero_logo_text{
+		transition: opacity 0.5s ease-in-out;
+		opacity: 1;
+		background-color: #290029;
+	}
+`
 
 const HeroImage = styled.div`
 	position: relative;
@@ -73,6 +87,7 @@ const HeroImage = styled.div`
 		pointer-events: none;
 	}
 `
+
 
 const HeroText = styled.div`
 	position: absolute;
