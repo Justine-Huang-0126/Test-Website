@@ -1,8 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css"
-import Layout from "../components/Layout"
-import NavBar from "../components/NavBar"
 import React, { useState, useRef, useEffect } from "react"
-import Test from "../components/home/Test"
+import Layout from "../components/shared/Layout"
+import NavBar from "../components/shared/NavBar"
+import Test from "../components/home/Landing"
 import Hero from "../components/home/Hero"
 
 const IndexPage = () => {
@@ -12,8 +12,8 @@ const IndexPage = () => {
   useEffect(() => {
       const handleScroll = () => {
         // setNavbar(window.scrollY > window.innerHeight )
-        setNavbar(window.scrollY > window.innerHeight )
-        console.log("window.scrollY", window.scrollY)
+        setNavbar(window.scrollY > (window.innerHeight-(window.innerHeight*0.1)) )
+        // console.log("window.scrollY", window.scrollY)
       }
 
       window.addEventListener('scroll', handleScroll)

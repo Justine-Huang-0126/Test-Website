@@ -2,7 +2,7 @@
 import { Link } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
 import "bootstrap/dist/css/bootstrap.min.css"
-import React, { useState, useEffect } from "react"
+import React from "react"
 import styled from "styled-components"
 
 
@@ -16,7 +16,7 @@ const NavBar = ({navbar}) => {
 				<div className="container-fluid">
 					<StaticImage
 						className="navbar-brand logo contain ps-5"
-						src="../images/test_logo_2.png"
+						src="../../images/test_logo_2_cream.png"
 						alt="Logo"
 						width={logo_width}
 						objectFit="contain"

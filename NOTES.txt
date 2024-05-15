@@ -40,3 +40,7 @@ Postion:
 .sticky-{ top | bottom }
 
 TRY GATSBY LINK OUT
+
+#290029
+#F0FFF1 Text
+#2d002d80

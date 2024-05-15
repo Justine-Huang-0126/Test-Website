@@ -27,7 +27,7 @@ const Hero = (props) => {
 						placeholder="none"
 					/>
 				</HeroLogo>
-				<HeroText className="h1 align-middle text-white">
+				<HeroText className="display-1 align-center">
 					Hi! This is a Test Website
 				</HeroText>
 			</div>
@@ -64,13 +64,12 @@ const Herocontainer = styled.div`
 const HeroImage = styled.div`
 	position: relative;
 	display: inline-block;
-	/* width: auto;
-	height: auto; */
+	width: inherit;
 	margin: 0;
 	padding: 0;
 
 	.hero-img {
-		width: 100vw;
+		width: inherit;
 		height: 100vh;
 		margin: 0;
 		padding: 0;
@@ -91,13 +90,14 @@ const HeroImage = styled.div`
 
 const HeroText = styled.div`
 	position: absolute;
-	top: 50%;
+	top: 60%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	color: #F0FFF1;
 `
 const HeroLogo = styled.div`
 	position: absolute;
-	top: 15%;
+	top: 30%;
 	left: 50%;
 	scale: 50%;
 	transform: translate(-100%, -100%);
