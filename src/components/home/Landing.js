@@ -1,12 +1,16 @@
 import * as React from "react"
 import styled from "styled-components";
 import bg from "../../images/bg_space.jpg"
-import PaperCanvas from "../features/Page_1";
+import Page1 from "../features/Page1";
+import Page2 from "../features/Page2";
+import Page3 from "../features/Page3";
 
 const Landing = ({scrollRef}) => {
 	return(
-		<LandingDiv className="container-fluid p-0" ref={scrollRef}>
-			<PaperCanvas></PaperCanvas>
+		<LandingDiv className="container-fluid p-0 section" ref={scrollRef}>
+			<Page1/>
+			<Page2/>
+			<Page3/>
 		</LandingDiv>
 	)
 }
@@ -14,7 +18,7 @@ const Landing = ({scrollRef}) => {
 export default Landing;
 
 const LandingDiv = styled.div`
-	height: 100vh;
+	// height: 100vh;
 
 	/* background-image: url(${bg});
 	// background-color: #290029;

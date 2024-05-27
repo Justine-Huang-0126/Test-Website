@@ -9,7 +9,7 @@ const Hero = (props) => {
 	const navbar = props.navbar
 
 	return(
-		<Herocontainer className="container-fluid hero-container py-0 px-0">
+		<Herocontainer className="container-fluid hero-container py-0 px-0 section">
 			<HeroImage className="image-mask-wrapper">
 				<StaticImage
 					className="hero-img"

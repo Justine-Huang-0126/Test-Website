@@ -1,29 +1,30 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styled from 'styled-components';
 
-const PaperCanvas = () => {
+const Page1 = () => {
 
   return (
     <Stars id="space">
       <h1 className='text-white'>The Final Frontier is Pure CSS</h1>
-      <div class="stars"></div>
-      <div class="stars"></div>
-      <div class="stars"></div>
-      <div class="stars"></div>
-      <div class="stars"></div>
+      <div className="stars"></div>
+      <div className="stars"></div>
+      <div className="stars"></div>
+      <div className="stars"></div>
+      <div className="stars"></div>
     </Stars>
   )
 }
 
-export default PaperCanvas
+export default Page1
 
 const Stars = styled.div`
+  height: 100vh;
   align-content: center;
   text-align: center;
 
   overflow: hidden;
   position: relative;
-  height: inherit;
+  //height: inherit;
 
   .stars {
     overflow: hidden;

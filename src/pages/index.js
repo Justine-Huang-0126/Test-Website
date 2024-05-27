@@ -5,6 +5,7 @@ import NavBar from "../components/shared/NavBar"
 import Test from "../components/home/Landing"
 import Hero from "../components/home/Hero"
 import AnimatedCursorCustom from "../components/shared/AnimatedCursorCustom"
+import GlobalStyle from "../components/shared/GlobalStyle"
 
 const IndexPage = () => {
   const [navbar, setNavbar] = useState(false)
@@ -36,9 +37,9 @@ const IndexPage = () => {
 
   return (
     <>
-      
+      <GlobalStyle/>
       <Layout>
-        <AnimatedCursorCustom/>
+        {/* <AnimatedCursorCustom/> */}
         <NavBar navbar={navbar}/>
         <Hero handleScrollDown={handleScrollDown} navbar={navbar}/>
         <Test scrollRef={scrollRef}/>
