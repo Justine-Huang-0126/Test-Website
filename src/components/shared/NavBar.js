@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import "bootstrap/dist/css/bootstrap.min.css"
 import React from "react"
 import styled from "styled-components"
+import Granim from 'react-granim'
 
 
 const NavBar = ({navbar}) => {
@@ -13,6 +14,24 @@ const NavBar = ({navbar}) => {
 	return (
 		<Fadein>
 			<nav className={"navbar navbar-expand-sm fixed-top" + (navbar ? " visible" : " hidden")}>
+				<Granim 
+					id="navbar-granim"
+					direction="diagonal"
+					states={{
+						"default-state": {
+							gradients: [
+								['#23074d', '#cc5333'],
+								['#1a2a6d', '#520276'],
+								['#0f0c29', '#302b63'],
+								['#1a2a6d', '#920042'],
+							],
+							transitionSpeed: 2000,
+							loop: true
+						}
+					}}
+					isPausedWhenNotInView={true}
+					opacity={[0.8, 1, 0.5, 0.8]}
+				/>
 				<div className="container-fluid">
 					<StaticImage
 						className="navbar-brand logo contain ps-5"
@@ -44,6 +63,8 @@ const NavBar = ({navbar}) => {
 export default NavBar
 
 const Fadein = styled.div`
+	position: relative;
+
 	.navbar{
 		transition: opacity 0.5s ease-in-out;
 		opacity: 1;
@@ -75,7 +96,11 @@ const Fadein = styled.div`
 	}
 	
 	.nav-link {
-		color: #F0FFF1
+		color: #F0FFF1;
+	}
+
+	#navbar-granim{
+		z-index: -1;
 	}
 `
 

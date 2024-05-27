@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import "bootstrap/dist/css/bootstrap.min.css"
+import HeroBackground from "./HeroBackground"
 
 const Hero = (props) => {
 
@@ -11,12 +12,7 @@ const Hero = (props) => {
 	return(
 		<Herocontainer className="container-fluid hero-container py-0 px-0 section">
 			<HeroImage className="image-mask-wrapper">
-				<StaticImage
-					className="hero-img"
-					src="../../images/hero_image.jpg"
-					alt="Hero"
-					placeholder="none"
-				/>
+				<HeroBackground/>
 			</HeroImage>
 			<div className={"hero_logo_text" + ( navbar ? " hidden" : " visible")}>
 				<HeroLogo>
@@ -82,7 +78,7 @@ const HeroImage = styled.div`
 		left: 0;
 		width: 100vw;
 		height: 100vh;
-		background: rgba(69, 42, 94, 0.5);
+		//background: rgba(69, 42, 94, 0.5);
 		pointer-events: none;
 	}
 `

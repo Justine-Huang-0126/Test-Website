@@ -11,7 +11,6 @@ const GlobalStyle = createGlobalStyle`
 
   html{
     scroll-snap-type: y mandatory;
-    timeline-scope: --sectionscroller;
   }
 
   /* Hide scrollbar for Chrome, Safari and Opera */
@@ -28,7 +27,6 @@ const GlobalStyle = createGlobalStyle`
     /* Creating a snapping rule on the section element */
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    view-timeline: --section;
 
     /* Set each section to the full dynamic height of the viewport */
     height: 100dvh;

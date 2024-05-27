@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components';
 import Granim from 'react-granim'
 
-const Page1 = () => {
+const HeroBackground = () => {
 
   return (
     <Stars id="space">
       <Granim 
-        id="granim"
+        id="granim-hero"
         direction="diagonal"
         states={{
           "default-state": {
@@ -34,7 +34,7 @@ const Page1 = () => {
   )
 }
 
-export default Page1
+export default HeroBackground
 
 const Stars = styled.div`
   height: 100vh;
