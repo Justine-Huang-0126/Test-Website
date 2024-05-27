@@ -5,14 +5,7 @@ import bg from "../../images/bg_space.jpg"
 const Landing = ({scrollRef}) => {
 	return(
 		<LandingDiv className="container-fluid p-0" ref={scrollRef}>
-			<div className="row bg-mask">
-				<div className="col landing-col text-white bg-dark">
-					<h1>COLUMN 1</h1>
-				</div>
-				<div className="col landing-col text-white bg-dark">
-					<h1>COLUMN 2</h1>
-				</div>
-			</div>
+			
 		</LandingDiv>
 	)
 }
